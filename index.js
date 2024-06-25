@@ -1,13 +1,13 @@
 const express = require("express")
-const calculadoraBackend = express()
+const hacerParejas = express()
 const port = 3000
 
 // registramos el contenido estatico: asi se sirven los ficheros al navegador
-calculadoraBackend.use(express.static('static/html'))
-calculadoraBackend.use(express.static('static/js'))
-calculadoraBackend.use(express.static('static/css'))
+hacerParejas.use(express.static('static/html'))
+hacerParejas.use(express.static('static/js'))
+hacerParejas.use(express.static('static/css'))
 
 // Escuchamos, si no escuchamos el servidor no responde
-calculadoraBackend.listen(port, () => {
-    console.log(`Calculadora escuchando en http://localhost:${port}`)
+hacerParejas.listen(port, () => {
+    console.log(`Parejas escuchando en http://localhost:${port}`)
 })
