@@ -46,8 +46,32 @@ body {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1C7CCC;
   backface-visibility: hidden;
+}
+
+.front-azulin{
+  background-color: rgb(85, 195, 214);
+}
+.front-morado{
+  background-color: purple;
+}
+.front-verde{
+  background-color: rgb(0, 128, 0);
+}
+.front-amarillo{
+  background-color: rgb(229, 233, 30);
+}
+.front-rosa{
+  background-color: rgb(219, 125, 180);
+}
+.front-negro{
+  background-color: rgb(0, 0, 0);
+}
+.front-blanco{
+  background-color: rgb(255, 255, 255);
+}
+.front-gris{
+  background-color: rgb(151, 148, 151);
 }
 
 .front {
