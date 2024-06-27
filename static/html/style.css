@@ -86,15 +86,15 @@ body {
   cursor: pointer;
 }
 
-.contador.puntos {
+.contador-puntos {
   display: none;
   border: 8px solid #607d8b;
   background-color: #ffffff9c;
   padding: 1rem;
   color: #fbfbfb;
 }
-.contador.puntos > h2 {
-  display: inline-flex;
+.contador-puntos > h2 {
+  flex-direction: column;
   color: white;
   font-size: 2rem;
   font-weight: bolder;
