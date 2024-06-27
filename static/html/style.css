@@ -81,3 +81,8 @@ body {
 .back {
   background-color: red;
 }
+
+
+.memory-card:hover {
+  cursor: pointer;
+}
