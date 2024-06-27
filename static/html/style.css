@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   display: flex;
-  background: #060AB2;
+  background: #060ab2;
 }
 
 .memory-game {
@@ -26,13 +26,13 @@ body {
   position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .memory-card:active {
   transform: scale(0.97);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .memory-card.flip {
@@ -49,28 +49,28 @@ body {
   backface-visibility: hidden;
 }
 
-.front-azulin{
+.front-azulin {
   background-color: rgb(85, 195, 214);
 }
-.front-morado{
+.front-morado {
   background-color: purple;
 }
-.front-verde{
+.front-verde {
   background-color: rgb(0, 128, 0);
 }
-.front-amarillo{
+.front-amarillo {
   background-color: rgb(229, 233, 30);
 }
-.front-rosa{
+.front-rosa {
   background-color: rgb(219, 125, 180);
 }
-.front-negro{
+.front-negro {
   background-color: rgb(0, 0, 0);
 }
-.front-blanco{
+.front-blanco {
   background-color: rgb(255, 255, 255);
 }
-.front-gris{
+.front-gris {
   background-color: rgb(151, 148, 151);
 }
 
@@ -82,7 +82,29 @@ body {
   background-color: red;
 }
 
-
 .memory-card:hover {
   cursor: pointer;
 }
+
+.contador.puntos {
+  display: none;
+  border: 8px solid #607d8b;
+  background-color: #ffffff9c;
+  padding: 1rem;
+  color: #fbfbfb;
+}
+.contador.puntos > h2 {
+  display: inline-flex;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+h2:has(> span#matches) {
+  color: green;
+}
+
+h2:has(> span#failures) {
+  color: blue;
+}
+
