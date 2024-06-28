@@ -1,14 +1,14 @@
 (() => {
+  const tiempoContador = 1000; //En milisegundos
   const cards = document.querySelectorAll(".memory-card");
+  const cardQty = cards.length;
   const marcador = {
     acierto: 0,
     aciertos: document.getElementById("aciertos"),
     cagadas: document.getElementById("cagadas"),
   };
 
-  const cardQty = cards.length;
-
-  let hasFlippedCard, firstCard, secondCard;
+  let hasFlippedCard, firstCard, secondCard, seconds;
 
   function flipCard() {
     this.classList.add("flip");
@@ -77,8 +77,24 @@
     marcador.cagadas.innerText = marcador.cagada;
   }
 
+  function startTimer() {
+    function incrementarContador() {
+      //Establecer intervalo
+      seconds++;
+      let tiempoTranscurrido = `Tiempo: ${seconds}`;
+      document.getElementById("game-timer").innerText = tiempoTranscurrido;
+      console.log(`Contador segundos: ${seconds}`);
+    }
+    seconds = 0;
+    timer = setInterval(incrementarContador, tiempoContador); //Comienzo del Tiempo
+    //clearInterval(timer);
+
+    document.getElementById("game-timer").innerText = `Tiempo: ${seconds}`;
+  }
+
   (function startGame() {
     cards.forEach((card) => card.addEventListener("click", flipCard));
     resetGame();
+    startTimer();
   })();
 })();
