@@ -6,8 +6,7 @@
 
 body {
   height: 100vh;
-  display: flex;
-  background: #060ab2;
+  background: #060AB2;
 }
 
 .memory-game {
@@ -82,20 +81,24 @@ body {
   background-color: red;
 }
 
-.memory-card:hover {
+.memory-card:hover{
   cursor: pointer;
 }
 
-.contador-puntos {
-  display: none;
+#barra-navegacion {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+
+.item-navegacion {
   border: 8px solid #607d8b;
   background-color: #ffffff9c;
   padding: 1rem;
-  color: #fbfbfb;
 }
+
 .contador-puntos > h2 {
-  flex-direction: column;
-  color: white;
   font-size: 2rem;
   font-weight: bolder;
 }
@@ -105,6 +108,6 @@ h2:has(> span#matches) {
 }
 
 h2:has(> span#failures) {
-  color: blue;
+  color: rgb(236, 30, 30);
 }
 

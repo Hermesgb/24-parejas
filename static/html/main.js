@@ -1,9 +1,7 @@
 const cards = document.querySelectorAll('.memory-card');
-const tiempoDeEspera = 400 // milisegundos
 
 let hasFlippedCard = false;
 let firstCard, secondCard;
-
 
 function flipCard() {
     this.classList.add('flip');
@@ -38,7 +36,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, tiempoDeEspera);
+    }, 1500);
 }
 
 function resetBoard() {
@@ -54,3 +52,4 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard))
+
