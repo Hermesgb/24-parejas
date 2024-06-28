@@ -25,13 +25,13 @@ body {
   position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform 0.5s;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 
 .memory-card:active {
   transform: scale(0.97);
-  transition: transform 0.2s;
+  transition: transform .2s;
 }
 
 .memory-card.flip {
@@ -48,28 +48,28 @@ body {
   backface-visibility: hidden;
 }
 
-.front-azulin {
+.front-azulin{
   background-color: rgb(85, 195, 214);
 }
-.front-morado {
+.front-morado{
   background-color: purple;
 }
-.front-verde {
+.front-verde{
   background-color: rgb(0, 128, 0);
 }
-.front-amarillo {
+.front-amarillo{
   background-color: rgb(229, 233, 30);
 }
-.front-rosa {
+.front-rosa{
   background-color: rgb(219, 125, 180);
 }
-.front-negro {
+.front-negro{
   background-color: rgb(0, 0, 0);
 }
-.front-blanco {
+.front-blanco{
   background-color: rgb(255, 255, 255);
 }
-.front-gris {
+.front-gris{
   background-color: rgb(151, 148, 151);
 }
 
@@ -110,4 +110,3 @@ h2:has(> span#matches) {
 h2:has(> span#failures) {
   color: rgb(236, 30, 30);
 }
-
