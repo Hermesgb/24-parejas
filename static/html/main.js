@@ -78,18 +78,23 @@
   }
 
   function startTimer() {
+
+    function actualizarTiempo(seconds) {
+        let tiempoTranscurrido = `${seconds}`;
+        document.getElementById("game-timer").innerText = tiempoTranscurrido;
+        console.log(`Contador segundos: ${seconds}`);        
+    }
+
+
     function incrementarContador() {
       //Establecer intervalo
       seconds++;
-      let tiempoTranscurrido = `Tiempo: ${seconds}`;
-      document.getElementById("game-timer").innerText = tiempoTranscurrido;
-      console.log(`Contador segundos: ${seconds}`);
+      actualizarTiempo(seconds)
     }
     seconds = 0;
     timer = setInterval(incrementarContador, tiempoContador); //Comienzo del Tiempo
     //clearInterval(timer);
-
-    document.getElementById("game-timer").innerText = `Tiempo: ${seconds}`;
+    actualizarTiempo(seconds)
   }
 
   (function startGame() {
